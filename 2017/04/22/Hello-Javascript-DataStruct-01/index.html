@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Hello Javascript DataStruct(01) | Jim</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="#資料結構 Array
+####建立初始化陣列
+
+123456789101112131415&amp;gt;  //fibonacci數列&amp;gt;&amp;gt;  var fibonacci = []; //初始化&amp;gt;  fibonacci[1] = 1;&amp;gt;  fibonacci[2] = 1;&amp;gt;  &amp;gt;  for ( i=3 ; i &amp;lt; 11 ; i++) &amp;#123;&amp;gt;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hello Javascript DataStruct(01)">
+<meta property="og:url" content="http://yoursite.com/2017/04/22/Hello-Javascript-DataStruct-01/index.html">
+<meta property="og:site_name" content="Jim">
+<meta property="og:description" content="#資料結構 Array
+####建立初始化陣列
+
+123456789101112131415&amp;gt;  //fibonacci數列&amp;gt;&amp;gt;  var fibonacci = []; //初始化&amp;gt;  fibonacci[1] = 1;&amp;gt;  fibonacci[2] = 1;&amp;gt;  &amp;gt;  for ( i=3 ; i &amp;lt; 11 ; i++) &amp;#123;&amp;gt;">
+<meta property="og:updated_time" content="2017-04-22T14:45:31.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hello Javascript DataStruct(01)">
+<meta name="twitter:description" content="#資料結構 Array
+####建立初始化陣列
+
+123456789101112131415&amp;gt;  //fibonacci數列&amp;gt;&amp;gt;  var fibonacci = []; //初始化&amp;gt;  fibonacci[1] = 1;&amp;gt;  fibonacci[2] = 1;&amp;gt;  &amp;gt;  for ( i=3 ; i &amp;lt; 11 ; i++) &amp;#123;&amp;gt;">
+  
+    <link rel="alternate" href="/atom.xml" title="Jim" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Jim</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+          <a class="main-nav-link" href="/about">About</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Hello-Javascript-DataStruct-01" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/04/22/Hello-Javascript-DataStruct-01/" class="article-date">
+  <time datetime="2017-04-22T12:20:14.000Z" itemprop="datePublished">2017-04-22</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Hello Javascript DataStruct(01)
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>#資料結構 Array</p>
+<p>####建立初始化陣列</p>
+<blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">&gt;  //fibonacci數列</div><div class="line">&gt;</div><div class="line">&gt;  var fibonacci = []; //初始化</div><div class="line">&gt;  fibonacci[1] = 1;</div><div class="line">&gt;  fibonacci[2] = 1;</div><div class="line">&gt;  </div><div class="line">&gt;  for ( i=3 ; i &lt; 11 ; i++) &#123;</div><div class="line">&gt;       fibonacci[i] = fibonacci[i-2] + fibonacci[i-1];</div><div class="line">&gt;   &#125;;</div><div class="line">&gt;  </div><div class="line">&gt;  for ( i=1 ; i &lt; fibonacci.length; i++) &#123;</div><div class="line">&gt;      console.log(fibonacci[i]);</div><div class="line">&gt;  &#125;</div><div class="line">&gt; </div><div class="line">&gt;</div></pre></td></tr></table></figure>
+</blockquote>
+<p>####添加和刪除元素</p>
+<p>push（添加最後項）&lt;==&gt; pop (移除最後項)<br><br>unshift（添加最前項）&lt;==&gt; shift （其除最前項）<br></p>
+<p><br></p>
+<p>####二維和多維陣列</p>
+<blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line">&gt;//二維陣列</div><div class="line">&gt;</div><div class="line">&gt;var averageTemp = [];</div><div class="line">&gt;</div><div class="line">&gt;averageTemp[0] = [];</div><div class="line">&gt;averageTemp[0][0] = 72;</div><div class="line">&gt;averageTemp[0][1] = 75;</div><div class="line">&gt;averageTemp[0][2] = 79;</div><div class="line">&gt;averageTemp[0][3] = 79;</div><div class="line">&gt;averageTemp[0][4] = 81;</div><div class="line">&gt;averageTemp[0][5] = 81;</div><div class="line">&gt;</div><div class="line">&gt;averageTemp[1] = [];</div><div class="line">&gt;averageTemp[1][0] = 81;</div><div class="line">&gt;averageTemp[1][1] = 79;</div><div class="line">&gt;averageTemp[1][2] = 75;</div><div class="line">&gt;averageTemp[1][3] = 75;</div><div class="line">&gt;averageTemp[1][4] = 73;</div><div class="line">&gt;averageTemp[1][5] = 72;</div><div class="line">&gt;</div><div class="line">&gt;function printMatrix(myMatrix) &#123;</div><div class="line">&gt;    for (var i=0; i&lt;myMatrix.length; i++)&#123;</div><div class="line">&gt;        for (var j=0; j&lt;myMatrix[i].length; j++)</div><div class="line">&gt;        &#123;</div><div class="line">&gt;             console.log(myMatrix[i][j]);</div><div class="line">&gt;	     &#125;</div><div class="line">&gt;    &#125;</div><div class="line">&gt;&#125;</div><div class="line">&gt;</div><div class="line">&gt;printMatrix(averageTemp);</div><div class="line">&gt;</div><div class="line">&gt;</div></pre></td></tr></table></figure>
+</blockquote>
+<p><br></p>
+<p>####陣列方法（合併、迭代器函數、搜尋和排序、輸出陣列為字串）</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">方法名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">concat</td>
+<td>連接2個或更多陣列，並返回結果</td>
+</tr>
+<tr>
+<td style="text-align:left">every</td>
+<td>對陣列中的每一項運行給定函數，如果該函數對每一項都返回true，則返回true</td>
+</tr>
+<tr>
+<td style="text-align:left">filter</td>
+<td>對陣列中的每一項運行給定函數，返回該函數會返回、true的項目組成的陣列</td>
+</tr>
+<tr>
+<td style="text-align:left">forEach</td>
+<td>對陣列中的每一項運行給定函數。這個方法沒有返回值</td>
+</tr>
+<tr>
+<td style="text-align:left">join</td>
+<td>將所有的陣列元素連接成一個字串</td>
+</tr>
+<tr>
+<td style="text-align:left">indexOf</td>
+<td>返回第一個與給定參數相等的陣列元素的索引，沒有找到則返回-1</td>
+</tr>
+<tr>
+<td style="text-align:left">lastIndexOf</td>
+<td>返回在陣列中搜尋到與給定參數相等的元素的索引裡最大的值</td>
+</tr>
+<tr>
+<td style="text-align:left">map</td>
+<td>對陣列中的每一項運行給定函數，返回每次函數呼叫的結果組成的陣列</td>
+</tr>
+<tr>
+<td style="text-align:left">reverse</td>
+<td>顛倒陣列中元素的順序，原先第一個元素現在變成最後一個，同樣原先的最後一個元素變成了現在的第一個</td>
+</tr>
+<tr>
+<td style="text-align:left">slice</td>
+<td>傳入索引值，將陣列裡對應索引範圍內的元素作為新陣列反回</td>
+</tr>
+<tr>
+<td style="text-align:left">some</td>
+<td>對陣列中的每一項運行給定函數，如果任一項返回true，則返回true</td>
+</tr>
+<tr>
+<td style="text-align:left">sort</td>
+<td>按照字母順序對陣列排序，支援傳入指定排序方法的函數作為參數</td>
+</tr>
+<tr>
+<td style="text-align:left">toString</td>
+<td>將陣列作為字串返回</td>
+</tr>
+<tr>
+<td style="text-align:left">valueOf</td>
+<td>和toString類似，將陣列作為字串返回</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">//簡單實作用push加新元素進入array裡</div><div class="line">//結果由 [1, 2, 3, 4, 5]</div><div class="line">//變 [1, 2, 3, 4, 5, 6]</div><div class="line"></div><div class="line">var HarryPotter = [1, 2, 3, 4, 5];</div><div class="line"></div><div class="line">console.log(&quot;Before: &quot;)</div><div class="line">for (var i=0; i&lt;HarryPotter.length; i++)&#123;</div><div class="line">    console.log(HarryPotter[i]);</div><div class="line">&#125;</div><div class="line"></div><div class="line">HarryPotter.push(6)</div><div class="line"></div><div class="line">console.log()</div><div class="line">console.log(&quot;After: &quot;)</div><div class="line">for (var i=0; i&lt;HarryPotter.length; i++)&#123;</div><div class="line">     console.log(HarryPotter[i]);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/04/22/Hello-Javascript-DataStruct-01/" data-id="cj3sbfrco00033f7hfv2ys4z9" class="article-share-link">Share</a>
+      
+        <a href="http://yoursite.com/2017/04/22/Hello-Javascript-DataStruct-01/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/05/10/timeline/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          timeline
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/03/14/example/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">example</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/05/11/團隊建立從0到1/">團隊建立從0到1</a>
+          </li>
+        
+          <li>
+            <a href="/2017/05/11/Isomorphic/">Isomorphic</a>
+          </li>
+        
+          <li>
+            <a href="/2017/05/11/RxJS/">RxJS</a>
+          </li>
+        
+          <li>
+            <a href="/2017/05/10/timeline/">timeline</a>
+          </li>
+        
+          <li>
+            <a href="/2017/04/22/Hello-Javascript-DataStruct-01/">Hello Javascript DataStruct(01)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    <div id="recentcomments" class="dsq-widget">
+    <p class="asidetitle">Recent Comments</p>
+        <script type="text/javascript" src="http://wowdacom.disqus.com/recent_comments_widget.js?num_items=10&hide_avatars=1&avatar_size=32&excerpt_length=100&hide_mods=0"></script>
+</div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav>
+    
+<script>
+  var disqus_shortname = 'wowdacom';
+  
+  var disqus_url = 'http://yoursite.com/2017/04/22/Hello-Javascript-DataStruct-01/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
